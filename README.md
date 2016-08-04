@@ -14,6 +14,9 @@ user
 
 You can replace the `sql` parameter value with your own SQL. Specify your CartoDB user with `user` parameter. 
 
+## Note on SELECT order
+If you have a series, Infogram requires the first element of the array to be the name of that series. Thus, the output is sensitive to the order in which columns are listed.
+
 # Deploy your own server:
 
 MAPC will host this as long as it is financially feasible, but if you'd like to deploy to your own infrastructure, click here:
