@@ -7,9 +7,29 @@ var CartoDB = require('cartodb');
 function convertToInfogram(data) {
   var arrays = [[]];
 
+  var core = arrays[0];
+  var series = [];
+  var firstRow = data.rows[0];
+  // first collection series names
+  // series.push("dataset");
+  for (i in firstRow) {
+    if (firstRow.hasOwnProperty(i)) {
+      series.push(i);
+    }
+  }
+
+  core.push(series);
+
   data.rows.forEach(function(row) {
     var core = arrays[0];
-    core.push([row.city, row.rate]);
+    var collection = [];
+
+    for (i in row) {
+      if (row.hasOwnProperty(i)) {
+        collection.push(row[i]);
+      }
+    }
+    core.push(collection);
   });
   
   return arrays;
