@@ -1,0 +1,6 @@
+{
+  "name": "Cartogram Relay",
+  "description": "Make Infogram charts from Carto data.",
+  "repository": "https://github.com/MAPC/cartogram-relay",
+  "keywords": ["node", "express"]
+}
