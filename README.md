@@ -17,6 +17,9 @@ You can replace the `sql` parameter value with your own SQL. Specify your CartoD
 ## Note on SELECT order
 If you have a series, Infogram requires the first element of the array to be the name of that series. Thus, the output is sensitive to the order in which columns are listed.
 
+# Why?
+Some like to keep their data in one place, and would like one source of truth as a matter of data infrastructure. For those using CartoDB (and Carto's syncing feature), this is a perfect solution for building live charts that update whenever data in Carto is updated.
+
 # Deploy your own server:
 
 MAPC will host this as long as it is financially feasible, but if you'd like to deploy to your own infrastructure, click here:
