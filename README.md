@@ -13,3 +13,9 @@ sql
 user
 
 You can replace the `sql` parameter value with your own SQL. Specify your CartoDB user with `user` parameter. 
+
+# Deploy your own server:
+
+MAPC will host this as long as it is financially feasible, but if you'd like to deploy to your own infrastructure, click here:
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
