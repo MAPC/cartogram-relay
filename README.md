@@ -3,7 +3,7 @@
 Infogram has a live JSON feed feature. This tool converts the output from CartoDB and makes it compatible with Infogram, on the fly. 
 
 For example, plug this url into an Infogram JSON feed, and get a chart:
-https://cartogram-relay.herokuapp.com/infogram?sql=select pumatype, aalf_p AS something, aslf_p FROM youth_laborforce_by_race&user=regionalindicators
+[https://cartogram-relay.herokuapp.com/infogram?sql=select pumatype, aalf_p AS something, aslf_p FROM youth_laborforce_by_race&user=regionalindicators](https://cartogram-relay.herokuapp.com/infogram?sql=select pumatype, aalf_p AS something, aslf_p FROM youth_laborforce_by_race&user=regionalindicators)
 
 Endpoint:
 /infogram
