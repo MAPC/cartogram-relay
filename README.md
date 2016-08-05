@@ -25,3 +25,7 @@ Some like to keep their data in one place, and would like one source of truth as
 MAPC will host this as long as it is financially feasible, but if you'd like to deploy to your own infrastructure, click here:
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
+# New Features
+
+Need to be able to `cast` and `melt` data on the fly.
