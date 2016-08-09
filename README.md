@@ -9,8 +9,13 @@ Endpoint:
 /infogram
 
 Query Parameters:
-sql
-user
+ - sql
+ - user
+
+ (new)
+ - groupBy
+ - aggrBy
+ - val
 
 You can replace the `sql` parameter value with your own SQL. Specify your CartoDB user with `user` parameter. 
 
@@ -26,6 +31,16 @@ MAPC will host this as long as it is financially feasible, but if you'd like to 
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
-# New Features
+# Pivoting data
 
-Need to be able to `cast` and `melt` data on the fly.
+It's not easy to pivot data on the fly. While infogram supports transposing data, it does not allow for pivoting or "casting" data. To perform a cast, you must specify 3 new parameters:
+
+ - groupBy: this will be the "rows" for the new table
+ - aggrBy: this will be the "columns"
+ - val: this will be the "value"
+
+ This is very similar to a Pivot Table in Excel. 
+
+ Example:
+
+http://cartogram-relay.herokuapp.com/infogram?sql=select%20%20industry,%20years%20,avgwage%20from%20wages_industry_by_year_msa&user=regionalindicators&groupBy=years&aggrBy=industry&val=avgwage
