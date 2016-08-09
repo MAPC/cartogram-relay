@@ -57,8 +57,6 @@ function cast(data, groupBy, aggrBy, val) {
     delete each.values;
     delete each.key;
 
-    console.log(map);
-
     result.push(map);
   });
   
@@ -80,9 +78,9 @@ router.get('/', function(req, res, next) {
 
       if (groupBy && aggrBy && val) { data = cast(data, groupBy, aggrBy, val); }
       else { 
-        var map = new Map(),
-            result = [];
+        var result = [];
         data.rows.forEach(function(row) {
+          var map = new Map();
           for (i in row) {
             if (row.hasOwnProperty(i)) {
               map.set(i, row[i]);    
@@ -92,8 +90,9 @@ router.get('/', function(req, res, next) {
           
         });
         data = { rows: result }
-      }
         console.log(data);
+      }
+        
       res.send(convertToInfogram(data));
     })
     .error(function(error) {
