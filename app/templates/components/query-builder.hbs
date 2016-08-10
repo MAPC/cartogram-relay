@@ -1,0 +1,32 @@
+<div class="ui form">
+  <div class="field">
+    <label>CartoDB Username:</label>
+    {{input type="text" value=this.user}}
+  </div>
+  <div class="field">
+    <label>SQL Query:</label>
+    {{input type="text" value=this.sql}}
+  </div>
+  <h4>Pivot (optional)</h4>
+  <div class="field">
+    <label>Rows:</label>
+    {{input type="text" value=this.groupBy}}
+  </div>
+  <div class="field">
+    <label>Columns:</label>
+    {{input type="text" value=this.aggrBy}}
+  </div>
+  <div class="field">
+    <label>Value:</label>
+    {{input type="text" value=this.val}}
+  </div>
+</div>
+
+<div class="ui segment">
+  <div class="ui top attached label">Output:</div>
+  <div class="ui form">
+    <div class="fluid field">
+      <input type="text" value={{urlString}}>
+    </div>
+  </div>
+</div>
